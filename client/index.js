@@ -56,7 +56,7 @@ fetch(serverUrl, {
 });
 
 function refreshPage() {
-    window.location.href = "http://127.0.0.1:5500/mainSuccess.html"
+    window.location.href = "https://capstone-0chateam.github.io/stocksimulation/mainSuccess.html"
 }
 
 

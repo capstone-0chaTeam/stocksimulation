@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
           alert(data);
           if(data === "회원가입 성공"){
             alert("회원가입 되었습니다. \n 초기자금 5000만원이 지급되었습니다. \n 행운을 빕니다.")
-            window.location.href ="http://127.0.0.1:5500/login.html";
+            window.location.href ="https://capstone-0chateam.github.io/stocksimulation/login.html";
           } else {
             alert("회원가입 실패");
           }

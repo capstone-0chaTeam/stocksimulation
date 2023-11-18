@@ -42,7 +42,7 @@ window.onload = () => {
                             localStorage.setItem('Authorization-Refresh', refreshToken);
 
                             console.log("로그인 완료. 메인화면으로 넘어갑니다")
-                            window.location.href = "http://127.0.0.1:5500/mainSuccess.html";
+                            window.location.href = "https://capstone-0chateam.github.io/stocksimulation/mainSuccess.html";
                         } else {
                             alert("아이디 또는 비밀번호가 잘못되었습니다.");
                             return;
