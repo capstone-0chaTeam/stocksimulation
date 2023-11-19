@@ -1,3 +1,8 @@
+window.onload = () => {
+    console.log("로딩되었음")
+}
+   
+
 document.addEventListener("DOMContentLoaded", function() {
     const loginForm = document.querySelector("#login-form");
 
