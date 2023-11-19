@@ -35,7 +35,7 @@ if (!serverUrl.startsWith("http://")) {
     serverUrl = "http://" + serverUrl;
 }
 
-fetch(serverUrl, {
+fetch(serverUrl, { 
     method: 'GET',
     headers: {
             'Authorization': "Bearer "+localStorage.getItem('accessToken')
@@ -63,12 +63,8 @@ function refreshPage() {
 
 //------------------------랭킹-------------------------
 
-const token1 = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBY2Nlc3NUb2"
-    fetch("hhttp://121.158.132.54:18646/userInfo/rank", {
-    method: 'GET',
-    headers: {
-        'Authorization': token1
-    }
+    fetch("http://121.158.132.54:18646/userInfo/rank", {
+    method: 'GET'
 })
 
 
