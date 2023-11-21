@@ -1,3 +1,8 @@
+window.onload = () => {
+    console.log("로딩되었음")
+}
+   
+
 var currentURL = window.location.href;
 
 if (currentURL.includes('?')) {
@@ -28,10 +33,15 @@ if (accessToken && refreshToken) {
 // 페이지 새로 고침// 다른 페이지로 리디렉션
 }
 
+function refreshPage() {
+    window.location.href = "https://capstone-0chateam.github.io/stocksimulation/mainSuccess.html"
+}
+
+
 
 //------------------------랭킹-------------------------
 
-    fetch("http://121.158.132.54:18646/userInfo/rank", {
+    fetch("https://racconworld.com:18646/userInfo/rank", {
     method: 'GET'
 })
 

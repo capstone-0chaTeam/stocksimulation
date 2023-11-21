@@ -1,5 +1,10 @@
+window.onload = () => {
+    console.log("로딩되었음")
+}
+   
+
 const accessToken = localStorage.getItem('accessToken');
-const serverUrl = "http://121.158.132.54:18646/userInfo/Id_NickName_Balance";
+const serverUrl = "https://racconworld.com:18646/userInfo/Id_NickName_Balance";
 //URL이 "http://" 또는 "https://"로 시작하지 않으면 "http://"를 추가
 if (!serverUrl.startsWith("http://")) {
     serverUrl = "http://" + serverUrl;
@@ -24,8 +29,3 @@ fetch(serverUrl, {
 .catch(error => {
     console.error('회원정보 요청 중 오류 발생:', error);
 });
-
-function refreshPage() {
-    window.location.href = "https://capstone-0chateam.github.io/stocksimulation/mainSuccess.html"
-}
-

@@ -1,3 +1,9 @@
+window.onload = () => {
+  console.log("로딩되었음")
+}
+ 
+
+
 document.addEventListener("DOMContentLoaded", function() {
   const signupForm = document.getElementById("signup-form");
   const messageDiv = document.getElementById("message");
@@ -9,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const id = document.getElementById("id").value;
 
 
-      fetch("http://121.158.132.54:18646/sign-up", {
+      fetch("https://racconworld.com:18646/sign-up", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -143,12 +143,12 @@
       </ul>
       <ul class="home__nav_bottom">
         <a onclick="SendMessageToUnity()" class="home__nav_bottom-1">게임시작 <br/> </a>
-        <script src="./cap10/Build/cap10.loader.js"></script>
+        <script src="/capstoneTest/Build/capstoneTest.loader.js"">  </script>
         <script>
           function SendMessageToUnity(){
             var accountNumber = localStorage.getItem('accountNumber');
-            var url = "http://localhost:55249?accountNumber=" + accountNumber;
-            window.location.href = url;}
+            var url = "http://localhost:61537?accountNumber=" + accountNumber;
+            window.location.href = url; }
         </script>
         <a class="home__nav_bottom-2" id="logoutButton">로그아웃<br/> </a>
         <script>
