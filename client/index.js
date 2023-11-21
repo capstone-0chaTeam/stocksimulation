@@ -40,8 +40,17 @@ function refreshPage() {
    
 //------------------------랭킹-------------------------
 
-    fetch("https://racconworld.com:18646/userInfo/rank", {
-    method: 'GET'
+//     fetch("https://racconworld.com:18646/userInfo/rank", {
+//     method: 'GET'
+// })
+
+
+const token1 = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBY2Nlc3NUb2"
+fetch("https://racconworld.com:18646/userInfo/rank", {
+    method: 'GET',
+    headers: {
+        'Authorization': token1
+    }
 })
 
 
