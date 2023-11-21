@@ -39,14 +39,15 @@ function refreshPage() {
       
 
 const accessToken = localStorage.getItem('accessToken');
-// const serverUrl = "https://racconworld.com:18646/userInfo/Id_NickName_Balance";
+const serverUrl = "https://racconworld.com:18646/userInfo/Id_NickName_Balance";
 // //URL이 "http://" 또는 "https://"로 시작하지 않으면 "http://"를 추가
+if (!serverUrl.startsWith("https://")) {
 // if (!serverUrl.startsWith("http://")) {
-// if (!serverUrl.startsWith("http://")) {
-//     serverUrl = "http://" + serverUrl;
+    serverUrl = "https://" + serverUrl;
 // }
 
-fetch("https://racconworld.com:18646/userInfo/Id_NickName_Balance", { 
+// fetch("https://racconworld.com:18646/userInfo/Id_NickName_Balance", { 
+    fetch("serverUrl", {
     method: 'GET',
     headers: {
             'Authorization': "Bearer "+localStorage.getItem('accessToken')
