@@ -71,65 +71,65 @@ fetch("https://racconworld.com:18646/userInfo/Id_NickName_Balance", {
 //     fetch("https://racconworld.com:18646/userInfo/rank", {
 //     method: 'GET'
 // })
-const token1 = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBY2Nlc3NUb2"
-fetch("https://racconworld.com:18646/userInfo/rank", {
-    method: 'GET',
-    headers: {
-        'Authorization': token1
-    }
-})
+// const token1 = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJBY2Nlc3NUb2"
+// fetch("https://racconworld.com:18646/userInfo/rank", {
+//     method: 'GET',
+//     headers: {
+//         'Authorization': token1
+//     }
+// })
 
 
 
 
 
-.then(response => response.json())
-.then(data => {
-   topRanking(data);
-   ranking(data);
-   infoRanking(data);
-})
-.catch(error => {
-    console.error('랭킹 정보 요청 중 오류 발생:', error);
-});
+// .then(response => response.json())
+// .then(data => {
+//    topRanking(data);
+//    ranking(data);
+//    infoRanking(data);
+// })
+// .catch(error => {
+//     console.error('랭킹 정보 요청 중 오류 발생:', error);
+// });
 
-function topRanking(data){
-     document.getElementById("nickname1").textContent = data[0].nickname;
-     document.getElementById("account1").textContent = data[0].balance +" 원";
+// function topRanking(data){
+//      document.getElementById("nickname1").textContent = data[0].nickname;
+//      document.getElementById("account1").textContent = data[0].balance +" 원";
  
-     document.getElementById("nickname2").textContent = data[1].nickname;
-     document.getElementById("account2").textContent = data[1].balance+" 원";
+//      document.getElementById("nickname2").textContent = data[1].nickname;
+//      document.getElementById("account2").textContent = data[1].balance+" 원";
  
-     document.getElementById("nickname3").textContent = data[2].nickname;
-     document.getElementById("account3").textContent = data[2].balance+" 원";
-};
-function ranking(data){
-    const table= document.getElementById("rankDB");
-    const tbody = table.querySelector('tbody');
-    data.forEach((data, index) => {
-        const row = document.createElement('tr');
+//      document.getElementById("nickname3").textContent = data[2].nickname;
+//      document.getElementById("account3").textContent = data[2].balance+" 원";
+// };
+// function ranking(data){
+//     const table= document.getElementById("rankDB");
+//     const tbody = table.querySelector('tbody');
+//     data.forEach((data, index) => {
+//         const row = document.createElement('tr');
 
-        const rankCell = document.createElement('td');
-        rankCell.textContent = index + 1;
-        row.appendChild(rankCell);
+//         const rankCell = document.createElement('td');
+//         rankCell.textContent = index + 1;
+//         row.appendChild(rankCell);
 
-        const nicknameCell = document.createElement('td');
-        nicknameCell.textContent = data.nickname;
-        row.appendChild(nicknameCell);
+//         const nicknameCell = document.createElement('td');
+//         nicknameCell.textContent = data.nickname;
+//         row.appendChild(nicknameCell);
 
-        const accountCell = document.createElement('td');
-        accountCell.textContent = data.balance + " 원";
-        row.appendChild(accountCell);
+//         const accountCell = document.createElement('td');
+//         accountCell.textContent = data.balance + " 원";
+//         row.appendChild(accountCell);
 
-        tbody.appendChild(row);
-})};
-function infoRanking(data) {
-    const savedDataString = localStorage.getItem('accountNumber');
+//         tbody.appendChild(row);
+// })};
+// function infoRanking(data) {
+//     const savedDataString = localStorage.getItem('accountNumber');
 
-    for (let i = 0; i < data.length; i++) {
-        if (data[i].account === savedDataString) {
-            document.getElementById("homeRanking").textContent = i+1;
-            return;  // 해당 계정을 찾으면 바로 함수를 종료하도록 수정
-        }
-    }
-}
+//     for (let i = 0; i < data.length; i++) {
+//         if (data[i].account === savedDataString) {
+//             document.getElementById("homeRanking").textContent = i+1;
+//             return;  // 해당 계정을 찾으면 바로 함수를 종료하도록 수정
+//         }
+//     }
+// }
