@@ -42,6 +42,7 @@ function refreshPage() {
 //------------------------랭킹-------------------------
 
     fetch("https://racconworld.com:18646/userInfo/rank", {
+        mode: 'no-cors',
     method: 'GET'
 })
 
