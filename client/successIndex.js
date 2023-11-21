@@ -11,7 +11,6 @@ if (!serverUrl.startsWith("http://")) {
 }
 
 fetch(serverUrl, { 
-    mode: 'no-cors',
     method: 'GET',
     headers: {
             'Authorization': "Bearer "+localStorage.getItem('accessToken')

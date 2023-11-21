@@ -18,7 +18,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
         
                 fetch("https://racconworld.com:18646/login", {
-                    mode: 'no-cors',
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

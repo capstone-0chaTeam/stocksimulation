@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
       fetch("https://racconworld.com:18646/sign-up", {
-        mode: 'no-cors',
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
