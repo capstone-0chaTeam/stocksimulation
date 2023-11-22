@@ -140,7 +140,16 @@
     <div class="home__nav">
       <ul class="home__nav_top">
         <a class="home__nav_top-1" href="https://www.bok.or.kr/ebook/ecatalog5.jsp?Dir=359" target="_blank">주식 용어 <br/> </a> 
-        <a class="home__nav_top-2" href="https://capstone-0chateam.github.io/stocksimulation/howtoplay.html"> 게임 방법 <br/> </a>
+<!--<a class="home__nav_top-2" href="https://capstone-0chateam.github.io/stocksimulation/howtoplay.html"> 게임 방법 <br/> </a>
+    -->
+        <a class="home__nav_top-2" onclick="SendMessageToUnity1()"> 게임 방법 <br/> </a>
+        
+             <script>
+          function SendMessageToUnity1(){
+            var accountNumber = localStorage.getItem('accountNumber');
+            var url = "https://capstone-0chateam.github.io/stocksimulation/stock12345/index.html?accountNumber=" + accountNumber;
+            window.location.href = url; }
+        </script>
       </ul>
       <ul class="home__nav_bottom">
         <a onclick="SendMessageToUnity()" class="home__nav_bottom-1">게임시작 <br/> </a>
