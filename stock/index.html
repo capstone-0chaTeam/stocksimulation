@@ -56,12 +56,12 @@
         updateBannerVisibility();
       }
 
-      var buildUrl = "https://capstone-0chateam.github.io/stocksimulation/stock/Build";
-      var loaderUrl = buildUrl + "/stock1.loader.js";
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/stock.loader.js";
       var config = {
-        dataUrl: buildUrl + "/stock1.data",
-        frameworkUrl: buildUrl + "/stock1.framework.js",
-        codeUrl: buildUrl + "/stock1.wasm",
+        dataUrl: buildUrl + "/stock.data.gz",
+        frameworkUrl: buildUrl + "/stock.framework.js.gz",
+        codeUrl: buildUrl + "/stock.wasm.gz",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "capstone",
